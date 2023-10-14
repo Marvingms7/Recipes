@@ -4,14 +4,15 @@ import { Ingredient } from '../shared/ingredient.model';
 @Component({
   selector: 'app-shopping-list',
   templateUrl: './shopping-list.component.html',
-  styleUrls: ['./shopping-list.component.css']
+  styleUrls: ['./shopping-list.component.css'],
 })
 export class ShoppingListComponent {
   ingredients: Ingredient[] = [
-    new Ingredient("Pastel", 15),
-    new Ingredient("Pizza", 3)
+    new Ingredient('Pastel', 15),
+    new Ingredient('Pizza', 3),
   ];
-  constructor(){
-
+  constructor() {}
+  onIngredientAdded(ingredient: Ingredient) {
+    this.ingredients.push(ingredient);
   }
 }
